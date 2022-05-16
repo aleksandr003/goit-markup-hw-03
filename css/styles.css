@@ -16,13 +16,20 @@ body {
   background-color: var(--primary-white-color);
 }
 
+img {
+  display: block;
+}
+
 .list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.hidden {
-  display: none;
+.section .hidden {
+  visibility: hidden;
+  margin: 0;
+  width: 0px;
+  height: 0px;
 }
 .link {
   text-decoration: none;
@@ -53,7 +60,7 @@ body {
 
 /* page-header */
 
-.page-header .container {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -105,7 +112,8 @@ body {
 
 /* hero */
 .hero {
-  margin-top: 47px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 }
 
@@ -115,8 +123,8 @@ body {
 }
 
 .hero .title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  max-width: 696px;
+  margin: 0 auto 30px auto;
 
   font-weight: 900;
   font-size: 44px;
@@ -145,6 +153,11 @@ body {
 }
 
 /* section */
+
+.section {
+  padding: 94px 0;
+}
+
 .section .title {
   color: var(--title-text-color);
 }
@@ -164,10 +177,12 @@ body {
 
 /* features */
 
+.features {
+  padding-bottom: 0;
+}
+
 .features-list {
   display: flex;
-  padding-top: 40px;
-  padding-bottom: 94px;
 }
 
 .features-list .flex-element {
@@ -212,6 +227,11 @@ body {
   display: flex;
 }
 
+.team-list .flex-element {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .team-list .flex-element:not(:last-child) {
   margin-right: 30px;
 }
@@ -222,8 +242,8 @@ body {
   background-color: #f5f4fa;
 }
 
-.team-list .img {
-  margin-bottom: 50px;
+.team-list-box {
+  padding: 30px 10px;
 }
 
 .team-list .title,
@@ -278,7 +298,6 @@ body {
 /* portfolio-list */
 
 .portfolio-list {
-  padding-top: 94px;
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -314,45 +333,40 @@ body {
 
 /*page-portfolio */
 
-.page-portfolio {
-  margin-bottom: 94px;
-}
-
-.page-portfolio .list {
+.portfolio-page {
   display: flex;
   flex-wrap: wrap;
 }
 
-.page-portfolio .flex-element {
+.portfolio-page .flex-element {
   margin-right: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-.page-portfolio .flex-element:nth-child(3n) {
+.portfolio-page .flex-element:nth-child(3n) {
   margin-right: 0;
 }
 
-.page-portfolio .flex-element:nth-last-child(-n + 3) {
+.portfolio-page .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.page-portfolio .title {
+.portfolio-page .title {
   margin: 0;
-  padding: 20px 24px 4px 24px;
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.page-portfolio .text {
+.portfolio-page .text {
   margin: 0;
-  padding-left: 24px;
-  padding-right: 24px;
   font-size: 16px;
   line-height: 1.875;
 }
 
-.page-portfolio .box {
+.portfolio-page .box {
+  padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
