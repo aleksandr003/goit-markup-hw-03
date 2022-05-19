@@ -25,11 +25,17 @@ img {
   margin: 0;
   list-style: none;
 }
-.section .hidden {
-  visibility: hidden;
-  margin: 0;
-  width: 0px;
-  height: 0px;
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 .link {
   text-decoration: none;
@@ -287,18 +293,21 @@ img {
   color: var(--primary-white-color);
 }
 
-.contacts-nav .address {
+.footer .contacts-nav {
   margin-top: 20px;
+}
+
+.contacts-nav .address {
   margin-bottom: 10px;
 }
-.contacts-nav .item {
+.contacts-nav .item:not(:last-child) {
   margin-bottom: 10px;
 }
 
 /* portfolio-list */
 
 .portfolio-list {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
